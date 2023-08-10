@@ -7,10 +7,10 @@
 //         res.write(data); //that is a send a data in localhost
 //         res.end();//thsi is server is end
 //       })
-// }).listen(port,()=>{//  start the server 
+// }).listen(port,()=>{//  start the server
 //   console.log("Server is Successfully Running, and App is listening on port "+port)
 // })
-// // simple in html in code 
+// // simple in html in code
 // let data = ` <body style="background-color: bisque;">
 // <h1 style="text-align: center;"> HISTORY OF NODE JS</h1>
 // <h2>Node.js is an open source server environment</h2>
@@ -25,6 +25,6 @@ let port = 4000;
 app.get("/",(req,res)=>{
     res.send(data);  //that is a send a data in localhost
     res.end(); //thsi is server is end
-}).listen(port, ()=>{//  start the server 
+}).listen(port, ()=>{//  start the server
         console.log("Server is Successfully Running, and App is listening on port "+port)
 });
