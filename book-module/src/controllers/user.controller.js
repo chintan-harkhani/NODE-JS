@@ -40,5 +40,6 @@ const userlist = async (req, res) => {
     }
 }
 module.exports = {
-    createuser
+    createuser,
+    userlist
 }

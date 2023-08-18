@@ -11,7 +11,7 @@ const  routes = express.Router();
 /** get user list */
 routes.get("/list",
   // validate(userValidatino.getUserList),
-  usercontroller.getUserList
+  usercontroller.userlist
 );
 module.exports =routes;
 

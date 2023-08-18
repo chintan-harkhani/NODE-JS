@@ -9,19 +9,19 @@ const createUser = async (reqBody) => {
     return user.create(reqBody);
 }
 
-// /**
-//  * get User list
-//  * @param {object} filter
-//  * @param {boject} options
-//  * @returns {Promise<user>}
-//  */
+ /**
+  * get User list
+ * @param {object} filter
+ * @param {boject} options
+ * @returns {Promise<user>}
+ */
 
-// const getUserList = async (filter , options) => {
-//     const skip = (Number(options.page || 1) -1 ) * Number(options.limit || 10);
+const getuserlist = async (req,res) => {
 
-//     return user.find(filter).skip(skip).limit(options.limit).select("- password");
-// };
+    return user.find();
+};
 
 module.exports = {
     createUser,
+    getuserlist
 }
