@@ -1,0 +1,1 @@
+module.exports.BookValidation = require("./book.validation")
