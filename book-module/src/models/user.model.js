@@ -21,10 +21,8 @@ const UserSchema = new mongoose.Schema(
                trim: true,
           },
           password: {
-               type: String
-          },
-          role: {
-               type: String
+               type: String,
+               trim: true
           },
           is_active: {
                type: Boolean,

@@ -13,11 +13,6 @@ const CategorySchema = new mongoose.Schema(
             trim: true,
             required: true,
         },
-        category_price: {
-            type: Number,
-            trim: true,
-            required: true,
-        },
         category_code: {
             type: String,
             trim: true,
