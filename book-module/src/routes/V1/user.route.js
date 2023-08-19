@@ -16,11 +16,11 @@ routes.get("/list",
 
 
 /** Delete user */
-// routes.delete(
-//   "/delete-user/:userId",
-//   // validate(userValidation.getDetails),
-//   usercontroller.deleteUser
-// );
+routes.delete(
+  "/delete-user/:userId",
+  // validate(userValidation.getDetails),
+  usercontroller.deleteUser
+);
 
 module.exports =routes;
 

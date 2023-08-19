@@ -12,6 +12,6 @@ const  routes = express.Router();
 /** get user list */
 // routes.get("/list",
 //   // validate(userValidatino.getUserList),
-//   categorycontroller.getUserList
+//   categorycontroller.
 // );
 module.exports =routes;

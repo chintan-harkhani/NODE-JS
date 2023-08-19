@@ -19,8 +19,8 @@ routes.get("/booklist",
 
 /** delete user  */
 
-// routes.delete("/delete-book/:bookid",
-//     //validate(BookValidation.DeleteBook),
-//     BookController.Deletebook
-// )
+routes.delete("/delete-book/:bookid",
+    //validate(BookValidation.DeleteBook),
+    BookController.Deletebook
+)
 module.exports = routes;
