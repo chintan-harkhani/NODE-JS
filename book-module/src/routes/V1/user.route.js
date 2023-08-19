@@ -13,5 +13,14 @@ routes.get("/list",
   // validate(userValidatino.getUserList),
   usercontroller.userlist
 );
+
+
+/** Delete user */
+// routes.delete(
+//   "/delete-user/:userId",
+//   // validate(userValidation.getDetails),
+//   usercontroller.deleteUser
+// );
+
 module.exports =routes;
 
