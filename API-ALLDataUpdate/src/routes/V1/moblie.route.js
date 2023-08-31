@@ -33,6 +33,13 @@ routes.delete("/delete-moblie/:mobileId",
 // upadate moblie details
 
 routes.put("/update-moblie/:mobileId",
-MoblieController.updateMobileDetails
+    MoblieController.updateMobileDetails
 )
+
+//mange status code  update
+
+routes.put("/manageStatus/:mobileId",
+    MoblieController.manageMoblie
+)
+
 module.exports = routes;
