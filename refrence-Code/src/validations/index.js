@@ -1,0 +1,15 @@
+module.exports.BookValidation = require("./book.validation");
+module.exports.CategoryValidation = require("./category.validation");
+module.exports.UserValidation = require("./user.validation");
+module.exports.BusValidation = require("./bud.validation");
+module.exports.GroceryValidation  =require("./grocery.validation");
+module.exports.HotelValidation =require("./hotel.validation");
+module.exports.JewellaryValidation = require("./jewellary.validation");
+module.exports.MovieValidation =require("./movie.vlidation");
+module.exports.MUsicValidation =require("./music.validation");
+module.exports.PhamarcyValidation = require("./phamarcy.validation");
+module.exports.ProductValidation =require("./product.validation");
+module.exports.SchoolValidation =require("./school.validation");
+module.exports.StationaryValidation =require("./stationary.validation");
+module.exports.TravelValidation =require("./travel.Validation");
+module.exports.MoblieValidation = require("./moblie.validation");

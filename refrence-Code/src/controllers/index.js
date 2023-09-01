@@ -1,0 +1,15 @@
+module.exports.usercontroller =require("./user.controller")
+module.exports.categorycontroller =require("./category.controller");
+module.exports.BookController = require("./book.controller");
+module.exports.ProductController = require("./product.controller");
+module.exports.BusController = require("./bus.controller");
+module.exports.TravelController = require("./travel.controller");
+module.exports.GroceryController =require("./grocery.controller");
+module.exports.HotelController = require("./hotel.controller");
+module.exports.JewellaryController = require("./jewellary.controller");
+module.exports.MovieController =require("./movie.controller");
+module.exports.MusicController =require("./music.controller");
+module.exports.PharmacyController = require("./pharmacy.controller");
+module.exports.SchoolController =require("./school.controller");
+module.exports.StationaryController =require("./stationary.controller");
+module.exports.MoblieController = require("./mobile.controller");
