@@ -3,15 +3,15 @@ const { product } = require("../models");
 // create products
 
 const CreateProduct = async (reqBody) => {
-    return product.create(reqBody);
+    return await product.create(reqBody);
 }
 
-//product lis
+//product list
 
 const ProductList = async (req, res) => {
     return product.find(
         // {$or : [{is_active : true , quantity : 1}]}
-    );
+    ).populate("category");
 }
 //get product id
 const ProductId = async (productId) => {

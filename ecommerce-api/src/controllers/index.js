@@ -1,8 +1,12 @@
 module.exports.UserController = require("./user.controller");
 module.exports.ElectroniceController = require("./electronice.controller");
 module.exports.JewellaryController = require("./jewellary.controller");
-module.exports.FashionController  = require("./fashion.controller");
+module.exports.FashionController = require("./fashion.controller");
 module.exports.CategoryController = require("./category.controller");
 module.exports.ProductController = require("./product.controller");
 module.exports.OrderDetailsController = require("./order_details.controller");
-
+module.exports.IteamOrderController = require("./iteamorder.controller");
+module.exports.TotalSoppingController = require("./totalshpping.controller");
+module.exports.CartieamController = require("./cartiteam.controller");
+module.exports.UserAddressController = require("./useraddress.controller");
+module.exports.UserPaymentController = require("./userpayment.controller");
