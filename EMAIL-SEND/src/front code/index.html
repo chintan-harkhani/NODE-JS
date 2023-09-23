@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card" id="card" style="display: flex;">
+
+    </div>
+</body>
+<script>
+    const apiUrl = 'http://localhost:8080/v1/spoartmange/spoartmangelist';
+
+    fetch(apiUrl)
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            let spoart = data.data;
+            console.log(spoart);
+      tbl = "";
+            spoart.map((val) => {
+                tbl+= `
+                       <div class="card" style="padding: 10px;">
+  <img src="${val.spoart_image}" alt="Avatar" style="width:300px ">
+  <div class="container">
+    <h4><b>${val.game_name}</b></h4>
+  </div>
+</div>
+                       `
+            })
+            document.getElementById('card').innerHTML = tbl;
+        })
+</script>
+
+</html>
