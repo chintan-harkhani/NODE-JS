@@ -16,16 +16,16 @@ router.get("/teamcategorylist",
 )
 
 //Teamcategory id
-router.get("/teamcategory/:teamcategoryId",
+router.get("/teamcategorylist/:teamcategoryId",
     TeamCategoryController.TeamcategoryId
 )
 
 //Teamcategory update
-router.put("/updateteamcategory/:teamcateogryId",
+router.put("/updateteamcategory/:teamcategoryId",
     TeamCategoryController.UpdateTeamcategory
 )
 
-//delete founder
+//delete team category
 router.delete("/deleteteamcategory/:teamcategoryId",
     TeamCategoryController.DeleteTeamcategory
 )

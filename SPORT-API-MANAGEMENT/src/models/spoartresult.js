@@ -2,25 +2,29 @@ const mongoose = require("mongoose")
 
 const resultSchema = new mongoose.Schema(
     {
-    //     category :{
-    //         type : mongoose.Types.ObjectId,
-    //         ref :"categorygame",
-    //    },
-        team_category :{
-             type :mongoose.Types.ObjectId,
-             ref:"teamcategory",
+        category: {
+            type: mongoose.Types.ObjectId,
+            ref: "categorygame",
         },
-        match:{
-            type:mongoose.Types.ObjectId,
-            ref:"matchdetails",
+        team1: {
+            type: mongoose.Types.ObjectId,
+            ref: "teamcategory"
         },
-        turnament :{
-            type :mongoose.Types.ObjectId,
-            ref:"turnament",
+        team2: {
+            type: mongoose.Types.ObjectId,
+            ref: "teamcategory"
         },
-        winner_team:{
+        turnament: {
+            type: mongoose.Types.ObjectId,
+            ref: "turnament",
+        },
+        winner_teamname: {
             type: String,
-            trim:true,
+            trim: true,
+        },
+        total_scores: {
+            type: String,
+            trim: true,
         },
         is_active: {
             type: Boolean,

@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const tournamentSchema = new mongoose.Schema(
     {
-        tournament: {
+        tournament_name: {
             type: String,
             trim: true
         },
@@ -10,9 +10,13 @@ const tournamentSchema = new mongoose.Schema(
              type : mongoose.Types.ObjectId,
              ref :"categorygame",
         },
-        teamcategory: {
+        team1: {
             type: mongoose.Types.ObjectId,
-            ref: "teamcategory",
+            ref: "teamcategory"
+        },
+        team2: {
+            type: mongoose.Types.ObjectId,
+            ref: "teamcategory"
         },
         match: {
             type: mongoose.Types.ObjectId,

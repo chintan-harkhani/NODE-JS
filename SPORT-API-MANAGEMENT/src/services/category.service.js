@@ -25,6 +25,12 @@ const DeleteCategory = async(categoryId)=>{
      return category.findByIdAndDelete(categoryId)
 }
 
+//cout value
+const CateogryCount =async(req ,res)=>{
+    return category.find().count()
+}
+
+
 //Find on category
 const Gamename = async(game_name)=>{
     return category.findOne({game_name});
@@ -36,5 +42,6 @@ module.exports = {
  categoryId,
  UpdateCategory,
  DeleteCategory,
- Gamename
+ Gamename,
+ CateogryCount
 }

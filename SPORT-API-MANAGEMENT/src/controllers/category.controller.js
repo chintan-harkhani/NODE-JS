@@ -26,10 +26,11 @@ const Createcategory = async (req, res) => {
 const CategoryList = async (req, res) => {
     try {
         const List = await CategoryService.CategoryList(req, res);
+        const cout = await CategoryService.CateogryCount(req ,res)
         res.status(200).json({
             success: true,
             message: "Category  List SuucessFully Get...!",
-            data: List
+            data: List , cout,
         })
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });

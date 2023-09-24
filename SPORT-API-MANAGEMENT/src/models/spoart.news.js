@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const spoartnewsSchema = new mongoose.Schema(
     {
-        newsCategory:{
+        newscategory:{
             type : mongoose.Types.ObjectId,
             ref:"categorygame",
         },
@@ -22,6 +22,7 @@ const spoartnewsSchema = new mongoose.Schema(
             type: Boolean,
             default: true,
         },
+
     },
     {
         timestamps: true,
@@ -29,5 +30,5 @@ const spoartnewsSchema = new mongoose.Schema(
     }
 );
 
-const tournament = mongoose.model("turnament", spoartnewsSchema);
-module.exports = tournament;
+const news = mongoose.model("spoartnews", spoartnewsSchema);
+module.exports = news;

@@ -26,7 +26,7 @@ const CreateTeamcategory = async (req, res) => {
 const TeamcategoryList = async (req, res) => {
     try {
         const List = await TeamCategoryService.TeamCtegoryList(req, res);
-        // const cout = await TeamCategoryService.TeamCategoryCount(req ,res);
+        const cout = await TeamCategoryService.TeamCategoryCount(req ,res);
         res.status(200).json({
             success: true,
             message: "Team Category List SuucessFully Get...!",
@@ -56,7 +56,7 @@ const TeamcategoryId = async (req, res) => {
     }
 }
 
-//update TeamCategory
+//update Team category
 const UpdateTeamcategory = async (req, res) => {
     try {
         const teamcategoryId = req.params.teamcategoryId;
@@ -64,15 +64,16 @@ const UpdateTeamcategory = async (req, res) => {
         if (!ID) {
             throw new Error("Team Category Data Not Found !...");
         };
-        await TeamCategoryService.UpdateTeamCategory(teamcategoryId, req.body);
+        await TeamCategoryService.UpdateTeamCategory(teamcategoryId , req.body);
         res.status(200).json({
-            success: true,
-            message: "TeamCategory details update successfully!"
-        });
+            success :true,
+            message:"SuccessFully Team Category Data Updated Details...!",
+        })
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
     }
 }
+
 
 //delete TeamCategory
 const DeleteTeamcategory = async (req, res) => {

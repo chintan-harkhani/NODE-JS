@@ -15,14 +15,14 @@ const founderSchema = new mongoose.Schema(
       trim: true,
       default: "Fantasy Sports",
     },
-    //  team_category:{
-    //    type :mongoose.Types.ObjectId,
-    //    ref :"teamcategory"
-    //  },
-    //  category :{
-    //    type : mongoose.Types.ObjectId,
-    //    ref :"categorygame",
-    //  },
+     team_category:{
+       type :mongoose.Types.ObjectId,
+       ref :"teamcategory"
+     },
+     category :{
+       type : mongoose.Types.ObjectId,
+       ref :"categorygame",
+     },
     is_active: {
       type: Boolean,
       default: true,

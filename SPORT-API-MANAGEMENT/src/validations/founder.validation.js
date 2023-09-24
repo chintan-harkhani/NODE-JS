@@ -6,8 +6,8 @@ const Joi = require("joi");
         founder_name :Joi.string().trim().required(),
         position :Joi.string().trim().required(),
         platform :Joi.string().trim(),
-        // team_category :Joi.string().trim().required(),
-        // category :Joi.string().trim().required(),
+        team_category :Joi.string().trim().required(),
+        category :Joi.string().trim().required(),
     })
  }
  module.exports = {

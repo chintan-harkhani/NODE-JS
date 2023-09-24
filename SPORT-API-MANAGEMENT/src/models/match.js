@@ -3,14 +3,18 @@ const mongoose = require("mongoose")
 const matchSchema = new mongoose.Schema(
     {
         match_name: {
-            type: Number,
+            type: String,
             trim: true
         },
         category :{
             type : mongoose.Types.ObjectId,
             ref :"categorygame",
        },
-        team_category: {
+        team1: {
+            type: mongoose.Types.ObjectId,
+            ref: "teamcategory"
+        },
+        team2: {
             type: mongoose.Types.ObjectId,
             ref: "teamcategory"
         },
