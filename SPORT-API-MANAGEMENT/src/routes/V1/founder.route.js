@@ -1,11 +1,13 @@
 const express = require("express");
 const { FounderController } = require("../../controllers");
 const validate = require("../../middlewares/validate");
-const { FounderValidation } = require("../../validations")
+const { FounderValidation } = require("../../validations");
+const auth = require("../../middlewares/auth");
 const router = express.Router();
 
 //create founder
 router.post("/foundercreate",
+  auth(),
     validate(FounderValidation.CreateFounder),
     FounderController.Createfounder
 )

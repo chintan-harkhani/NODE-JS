@@ -7,6 +7,5 @@ module.exports.TournamentService = require("./tournament.service");
 module.exports.SpoartResultService  = require("./spoartresult.service");
 module.exports.SpoartNewsService = require("./news.service");
 module.exports.UserService =require("./user.service");
-
-
-
+module.exports.TokenService =require("./token.service");
+module.exports.GalleryService =require("./gallery.service");

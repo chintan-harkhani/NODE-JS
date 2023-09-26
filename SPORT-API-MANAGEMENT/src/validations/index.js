@@ -7,3 +7,5 @@ module.exports.TournamentValidation =require("./tournament.validation");
 module.exports.SpoartResultValidation = require("./spoartresult.validation");
 module.exports.SpoartNewsValidation =require("./news.validation");
 module.exports.UserValidation =require("./user.validation");
+module.exports.TokenValidation =require("./token.validation");
+module.exports.GalleryValidation =require("./gallery.validation");

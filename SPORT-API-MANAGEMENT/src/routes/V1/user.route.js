@@ -2,32 +2,32 @@ const express = require("express");
 const { UserController } = require("../../controllers");
 const { UserValidation } = require("../../validations");
 const validate = require("../../middlewares/validate");
-const routes = express.Router();
+const router = express.Router();
 
 //create user
-routes.post("/createuser",
+router.post("/createuser",
     validate(UserValidation.CreateUser),
     UserController.CreateUser
 );
 
 //user list
-routes.get("/userlist",
+router.get("/userlist",
     UserController.UserList
 );
 
 //user id
-routes.get("/userlist/:userId",
+router.get("/userlist/:userId",
     UserController.UserId
 );
 
 //delete user
-routes.delete("/deleteuser/:userId",
+router.delete("/deleteuser/:userId",
     UserController.DeleteUser
 );
 
 //update user
-routes.put("/updateuser/:userId",
+router.put("/updateuser/:userId",
     UserController.UpdateUser
 );
 
-module.exports = routes;
+module.exports = router;

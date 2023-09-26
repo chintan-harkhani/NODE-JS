@@ -1,4 +1,5 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const  config = require("../config/config")
 
 const gallerySchema = new mongoose.Schema(
     {
@@ -18,7 +19,14 @@ const gallerySchema = new mongoose.Schema(
     {
         timestamps: true,
         versionKey: false,
-    }
+        toJSON :{
+            transform : function(doc , data) {
+                if(data?.spoart_img){
+                       data.spoart_img = `${config.base_url}spoart_images/${ data.spoart_img}`;
+                }
+            },
+        },
+    },
 );
 
 const spoartimg = mongoose.model("spoartimg", gallerySchema);

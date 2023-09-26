@@ -1,6 +1,6 @@
 const express  =  require("express");
 const http = require("http");
-// const cors = require("cors");
+const cors = require("cors");
 const bodyparser = require("body-parser")
 const {connectDB} =require("./db/dbconnection");
 const config = require("./config/config");
@@ -17,9 +17,9 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
 /** enable cors */
-// app.use(cors());
-// app.options("*", cors());
-// app.use(express.static(path.join(__dirname,`./public`)));
+app.use(cors());
+app.options("*", cors());
+app.use(express.static(path.join(__dirname,`./public`)));
 app.use("/v1",routes);
 app.use((req, res, next) => {
      next(new Error("Route not found!"));
